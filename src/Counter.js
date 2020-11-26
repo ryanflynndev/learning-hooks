@@ -1,12 +1,14 @@
-
+import React, { useState } from 'react'
 
 const Counter = () => {
+
+    const [counter, changeCounter] = useState(0)
 
     return (
         <div>
             <h3>Welcome Ryan!</h3>
-            <h3>Counter :0</h3>
-            <button>increase</button>
+            <h3>Counter: {counter}</h3>
+            <button onClick={() => changeCounter(counter + 1)}>increase</button>
             <button>decrease</button>
         </div>
     )
