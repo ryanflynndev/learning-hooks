@@ -5,8 +5,9 @@ const Counter = () => {
     const [counter, changeCounter] = useState(0)
 
     useEffect(() => {
-        console.log("hey")
-    }, [])
+        let interval = setInterval(() => console.log("interval"), 1000)
+        return function () { clearInterval(interval) }
+    })
 
     return (
         <div>
